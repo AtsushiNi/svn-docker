@@ -14,7 +14,8 @@ COPY localuser.list /home/svn/localuser.list
 COPY apache/ /etc/services.d/apache/
 COPY subversion/ /etc/services.d/subversion/
 COPY subversion-access-control /etc/subversion/subversion-access-control
-RUN chmod a+w /etc/subversion/* && chmod a+w /home/svn
+RUN chmod a+w /etc/subversion/* && chmod a+w /home/svn && \
+    chmod +x /etc/services.d/subversion/create-repo.sh
 
 RUN cp /usr/lib/apache2/modules/mod_dav.so /usr/local/apache2/modules/ &&\
     cp /usr/lib/apache2/modules/mod_dav_svn.so /usr/local/apache2/modules/ &&\
