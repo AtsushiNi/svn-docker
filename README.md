@@ -7,8 +7,32 @@ SVNをDockerで構築するプロジェクト
 docker-compose up -d
 ```
 
+# レポジトリの作成方法
+Subversionコンテナの中に入って操作を行う
+```sh
+docker exec -it subversion bash
+```
+```sh
+# /home/svn/repos(svn.confファイルのSVNParentPathで設定した値)のパスに移動
+cd /home/svn/repos
+# レポジトリの作成。testrepoというディレクトリが存在しない場合には自動で作成される
+svnadmin create testrepo
+```
+
 # アクセス方法
+## ブラウザ
 [http://localhost:8080/svn/repos](http://localhost:8080/svn/repos)にアクセス
+- 認証情報
+    - ユーザー名: `admin`
+    - パスワード: `pass`
+
+## CLI
+```
+brew install subversion
+```
+```
+svn checkout --username admin http://localhost:8080/svn/repos
+```
 
 # ユーザー追加方法
 1. 例えば一度Subversionのコンテナをビルドして、立ち上げてしまう
