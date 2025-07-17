@@ -40,9 +40,8 @@ RUN chown -R $UID:$GID /etc/services.d/apache &&\
 	chown -R $UID:$GID /home/svn &&\
 	chown -R $UID:$GID /usr/local/apache2
 
-RUN /etc/subversion/create-repo.sh
+RUN /etc/services.d/subversion/create-repo.sh
 
 USER $USERNAME
 
 EXPOSE 3690 8080 443
-
