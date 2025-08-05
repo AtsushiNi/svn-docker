@@ -9,6 +9,7 @@ if [ ! -d "/home/svn/repos" ]; then
 fi
 
 # デフォルトリポジトリがなければ作成
+rm -rf /home/svn/repos/testrepo
 if [ ! -d "/home/svn/repos/testrepo" ]; then
     cd /home/svn/repos || exit 1
     /usr/bin/svnadmin create testrepo
