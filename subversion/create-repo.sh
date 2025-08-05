@@ -4,7 +4,8 @@
 if [ ! -d "/home/svn/repos" ]; then
     mkdir -p /home/svn/repos
     chown -R svn:svn /home/svn/repos
-    chmod -R 770 /home/svn/repos
+    chmod -R 777 /home/svn
+    chmod -R 777 /home/svn/repos
 fi
 
 # デフォルトリポジトリがなければ作成
