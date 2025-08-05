@@ -17,3 +17,5 @@ fi
 chmod -R 777 /home/svn/repos/testrepo
 
 ls /home/svn/repos/testrepo
+svn import /tmp/svn-import-dir file:///home/svn/repos/testrepo -m "Initial import"
+ls /home/svn/repos/testrepo
