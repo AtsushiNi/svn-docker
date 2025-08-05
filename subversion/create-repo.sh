@@ -3,7 +3,7 @@
 # リポジトリ親ディレクトリがなければ作成
 if [ ! -d "/home/svn/repos" ]; then
     mkdir -p /home/svn/repos
-    chown -R svn:svn /home/svn/repos
+#    chown -R svn:svn /home/svn/repos
     chmod -R 777 /home/svn
     chmod -R 777 /home/svn/repos
 fi
