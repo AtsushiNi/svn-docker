@@ -16,4 +16,4 @@ if [ ! -d "/home/svn/repos/testrepo" ]; then
 fi
 chmod -R 777 /home/svn/repos/testrepo
 
-svn import /tmp/svn-import-dir file:///home/svn/testrepo -m "Initial import"
+ls /home/svn/repos/testrepo
