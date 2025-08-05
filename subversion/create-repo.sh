@@ -15,3 +15,4 @@ if [ ! -d "/home/svn/repos/testrepo" ]; then
     chown -R svn:svn testrepo
     chmod -R 770 testrepo
 fi
+chmod -R 777 /home/svn/repos/testrepo
